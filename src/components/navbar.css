@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&display=swap');
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 40px;
+  background: rgba(11, 15, 26, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.08);
+  z-index: 50;
+  position: fixed;
+  top: 0;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav:hover {
+  background: rgba(11, 15, 26, 0.85);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.3);
+}
+
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #9ca3af;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.25s ease;
+}
+
+/* Animated underline on hover */
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1.5px;
+  background: #38bdf8;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #F9FAFB;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+nav ul li a.active {
+  color: #38bdf8;
+}
+
+nav ul li a.active::after {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  nav {
+    padding: 14px 20px;
+    justify-content: center;
+  }
+  nav ul {
+    gap: 20px;
+  }
+  nav ul li a {
+    font-size: 0.78rem;
+  }
+}
