@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import techStack from '../components/techstack';
 import skills from '../components/skills';
@@ -7,7 +6,7 @@ import stats from '../components/stats';
 
 
 export default function About() {
-const navgate = useNavigate()
+const navigate = useNavigate()
   
   return (
     <div className="about">
@@ -55,7 +54,7 @@ const navgate = useNavigate()
 
           <div className="cta-row">
             <a href="#" className="about-btn about-btn-primary">Download CV →</a>
-            <a onClick={()=> navgate('/contact')} className="about-btn about-btn-ghost">Contact Me</a>
+            <a onClick={() => navigate('/contact')} className="about-btn about-btn-ghost">Contact Me</a>
           </div>
         </div>
 
