@@ -48,14 +48,14 @@ const handleSubmit = async (e)=>{
   e.preventDefault();
 
   try{
-    const res = await fetch('https://my-backend.onrender.com/send-email',{
+    const res = await fetch('https://my-backend-mo9k.onrender.com/send-email',{
       method: 'POST',
       headers: {'Content-type': 'application/json'},
       body: JSON.stringify(formData)
     })
     const data = await res.json();
     alert(data.message)
-    setFormData({fname: '', lname: '', emai: '', subject: '', message: '',})
+    setFormData({fname: '', lname: '', email: '', subject: '', message: '',})
   }catch(err){
     console.error(err)
     alert("Failed to send  message")
