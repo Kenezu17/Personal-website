@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 
 const GithubIcon = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
@@ -12,11 +13,6 @@ const LinkedInIcon = () => (
   </svg>
 );
 
-const XIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-  </svg>
-);
 
 const FacebookIcon = () => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -25,19 +21,47 @@ const FacebookIcon = () => (
 );
 
 const socials = [
-  { label: "GitHub",   icon: <GithubIcon />,   href: "#" },
-  { label: "LinkedIn", icon: <LinkedInIcon />,  href: "#" },
-  { label: "X",        icon: <XIcon />,         href: "#" },
-  { label: "Facebook", icon: <FacebookIcon />,  href: "#" },
+  { label: "GitHub",   icon: <GithubIcon />,   href:  "https://github.com/Kenezu17" },
+  { label: "LinkedIn", icon: <LinkedInIcon />,  href: "https://www.linkedin.com/in/jan-kenneth-fumar-3729b1386/" },
+  { label: "Facebook", icon: <FacebookIcon />,  href: "https://www.facebook.com/jankenneth.fumar.52" },
 ];
 
 const infoCards = [
-  { icon: "✉️", label: "Email",    value: "jankenneth@email.com" },
+  { icon: "✉️", label: "Email",    value: "jankennethfumar3@email.com" },
   { icon: "📍", label: "Location", value: "Philippines" },
   { icon: "💼", label: "Status",   value: "Open to opportunities" },
 ];
 
 export default function Contact() {
+ const [formData, setFormData]= useState({
+  fname: '',
+  lname: '',
+  email: '',
+  subject: '',
+  message: '',
+ })
+
+const handleChange = (e) =>{
+  setFormData({...formData, [e.target.name]: e.target.value })
+}
+const handleSubmit = async (e)=>{
+  e.preventDefault();
+
+  try{
+    const res = await fetch('http://127.0.0.1:5000/send-email',{
+      method: 'POST',
+      headers: {'Content-type': 'application/json'},
+      body: JSON.stringify(formData)
+    })
+    const data = await res.json();
+    alert(data.message)
+    setFormData({fname: '', lname: '', emai: '', subject: '', message: '',})
+  }catch(err){
+    console.error(err)
+    alert("Failed to send  message")
+  }
+}
+
   return (
     <div className="contact">
       <div className="orb orb1" />
@@ -81,32 +105,32 @@ export default function Contact() {
         </div>
 
         {/* Right: Form */}
-        <div className="form-card">
+        <form onSubmit={handleSubmit} className="form-card">
           <div className="form-row">
             <div className="field">
               <label>First name</label>
-              <input type="text" placeholder="Jan" />
+              <input type="text" name='fname' placeholder=" First name" value={formData.fname} onChange={handleChange} required />
             </div>
             <div className="field">
               <label>Last name</label>
-              <input type="text" placeholder="Kenneth" />
+              <input type="text" name='lname'  placeholder="Last name" value={formData.lname} onChange={handleChange} required />
             </div>
           </div>
           <div className="field">
             <label>Email</label>
-            <input type="email" placeholder="you@example.com" />
+            <input type="email" name='email' placeholder="you@example.com" value={formData.email} onChange={handleChange} required />
           </div>
           <div className="field">
             <label>Subject</label>
-            <input type="text" placeholder="What's this about?" />
+            <input type="text" name='subject' placeholder="What's this about?" value={formData.subject} onChange={handleChange} />
           </div>
           <div className="field">
             <label>Message</label>
-            <textarea placeholder="Hi Jan, I'd love to connect about..." />
+            <textarea name='message' placeholder="Hi Jan, I'd love to connect about..."  value={formData.message} onChange={handleChange} required />
           </div>
-          <button className="submit-btn">Send Message →</button>
+          <button className="submit-btn" type='submit'>Send Message →</button>
           <p className="form-note">I'll reply within 24–48 hours.</p>
-        </div>
+        </form>
       </div>
     </div>
   );

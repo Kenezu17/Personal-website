@@ -1,6 +1,7 @@
 
 const tanks = import.meta.glob('../assets/tanks/*.{jpg,png}', { eager: true });
 const portfolio = import.meta.glob('../assets/portfolio/*.{jpg,png}', { eager: true });
+ const brewpos = import.meta.glob('../assets/Brewpos/*.{jpg, png}', {eager:true})
 
 function importAll(imgobj) {
   return Object.values(imgobj).map((mod) => mod.default || mod);
@@ -8,6 +9,7 @@ function importAll(imgobj) {
 
 const tankimage = importAll(tanks)
 const portfolioImg = importAll(portfolio)
+const Brewpos = importAll(brewpos)
 
 const projects = [
   {
@@ -20,15 +22,15 @@ const projects = [
     thumb: "blue",
     Image: portfolioImg[0],
     featured: true,
-    github: "#",
-    demo: "#",
+    github: "https://github.com/Kenezu17",
+    demo: "https://github.com/Kenezu17/Personal-website",
   },
   {
     id: 2,
     title: "Tank destroyer",
     desc: "A 2D action game developed using python and pygame llibrary.The player control a tank and must eliminate enemy tanks until to  progeress through increasingly difficult levels.",
     tags: ["Python", "Pygame"],
-    badge: "Tool",
+    badge: "game",
     badgeClass: "badge-tool",
     thumb: "purple",
     Image: tankimage[0],
@@ -37,14 +39,14 @@ const projects = [
   },
   {
     id: 3,
-    title: "Network Monitor Dashboard",
-    desc: "A dashboard for monitoring network device status, ping latency, and uptime across a local network.",
-    tags: ["Python", "React", "Node.js"],
-    badge: "Tool",
+    title: "Pos App",
+    desc: "The all-in-one POS app for small coffee shop owners. Track your inventory with barcode scanning, monitor product sales, and get alerts when items are running low. Accept payments easily via GCash QR code, making transactions fast and convenient. Manage your shop efficiently and never worry about running out of stock.",
+    tags: ["flutter", "Spring Boot", ],
+    badge: "app",
     badgeClass: "badge-tool",
     thumb: "teal",
-    icon: "📊",
-    github: "#",
+    Image: Brewpos,
+    github: "https://github.com/Kenezu17",
     demo: "#",
   },
   
