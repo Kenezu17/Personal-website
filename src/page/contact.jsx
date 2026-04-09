@@ -48,7 +48,7 @@ const handleSubmit = async (e)=>{
   e.preventDefault();
 
   try{
-    const res = await fetch('http://127.0.0.1:5000/send-email',{
+    const res = await fetch('https://my-backend.onrender.com/send-email',{
       method: 'POST',
       headers: {'Content-type': 'application/json'},
       body: JSON.stringify(formData)
