@@ -1,7 +1,8 @@
 
 const tanks = import.meta.glob('../assets/tanks/*.{jpg,png}', { eager: true });
 const portfolio = import.meta.glob('../assets/portfolio/*.{jpg,png}', { eager: true });
- const brewpos = import.meta.glob('../assets/Brewpos/*.{jpg, png}', {eager:true})
+const brewpos = import.meta.glob('../assets/Brewpos/*.{jpg, png}', {eager:true})
+const weather = import.meta.glob('../assets/weather/*.{jpg,png}', {eager:true})
 
 function importAll(imgobj) {
   return Object.values(imgobj).map((mod) => mod.default || mod);
@@ -10,7 +11,7 @@ function importAll(imgobj) {
 const tankimage = importAll(tanks)
 const portfolioImg = importAll(portfolio)
 const Brewpos = importAll(brewpos)
-
+const Weathers = importAll(weather)
 const projects = [
   {
     id: 1,
@@ -49,7 +50,18 @@ const projects = [
     github: "https://github.com/Kenezu17",
     demo: "#",
   },
-  
+  {
+    id: 4,
+    title: "Weather App",
+    desc: "Simple weather app",
+    tags: ["React", "Tailwind", ],
+    badge: "app",
+    badgeClass: "badge-tool",
+    thumb: "teal",
+    Image: Weathers,
+    github: "https://github.com/Kenezu17",
+    demo: "https://github.com/Kenezu17/weather-app",
+  }
   
 ];
 
