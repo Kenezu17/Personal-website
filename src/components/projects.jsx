@@ -3,6 +3,7 @@ const tanks = import.meta.glob('../assets/tanks/*.{jpg,png}', { eager: true });
 const portfolio = import.meta.glob('../assets/portfolio/*.{jpg,png}', { eager: true });
 const brewpos = import.meta.glob('../assets/Brewpos/*.{jpg, png}', {eager:true})
 const weather = import.meta.glob('../assets/weather/*.{jpg,png}', {eager:true})
+const todo = import.meta.glob('../assets/weather/*.{jpg,png}', {eager:true})
 
 function importAll(imgobj) {
   return Object.values(imgobj).map((mod) => mod.default || mod);
@@ -12,6 +13,7 @@ const tankimage = importAll(tanks)
 const portfolioImg = importAll(portfolio)
 const Brewpos = importAll(brewpos)
 const Weathers = importAll(weather)
+const todo_list = importAll(todo)
 const projects = [
   {
     id: 1,
@@ -52,7 +54,7 @@ const projects = [
   },
   {
     id: 4,
-    title: "Weather App",
+    title: "Weather ",
     desc: "Simple weather app",
     tags: ["React", "Tailwind", 'Vscode' ],
     badge: "app",
@@ -61,6 +63,18 @@ const projects = [
     Image: Weathers,
     github: "https://github.com/Kenezu17",
     demo: "https://github.com/Kenezu17/weather-app",
+  },
+  {
+     id: 5,
+    title: "To Do web",
+    desc: "Simple TO DO List ",
+    tags: ["React", "Tailwind", 'Vscode' ],
+    badge: "web",
+    badgeClass: "badge-tool",
+    thumb: "teal",
+    Image: todo_list,
+    github: "https://github.com/Kenezu17",
+    demo: "https://github.com/Kenezu17/To-Do_List",
   }
   
 ];
