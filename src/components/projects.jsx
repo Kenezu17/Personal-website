@@ -3,7 +3,7 @@ const tanks = import.meta.glob('../assets/tanks/*.{jpg,png}', { eager: true });
 const portfolio = import.meta.glob('../assets/portfolio/*.{jpg,png}', { eager: true });
 const brewpos = import.meta.glob('../assets/Brewpos/*.{jpg, png}', {eager:true})
 const weather = import.meta.glob('../assets/weather/*.{jpg,png}', {eager:true})
-const todo = import.meta.glob('../assets/weather/*.{jpg,png}', {eager:true})
+const todo = import.meta.glob('../assets/todolist/*.{jpg,png}', {eager:true})
 
 function importAll(imgobj) {
   return Object.values(imgobj).map((mod) => mod.default || mod);
@@ -65,7 +65,7 @@ const projects = [
     demo: "https://github.com/Kenezu17/weather-app",
   },
   {
-     id: 5,
+    id: 5,
     title: "To Do web",
     desc: "Simple TO DO List ",
     tags: ["React", "Tailwind", 'Vscode' ],
