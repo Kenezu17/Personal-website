@@ -4,6 +4,7 @@ const portfolio = import.meta.glob('../assets/portfolio/*.{jpg,png}', { eager: t
 const brewpos = import.meta.glob('../assets/Brewpos/*.{jpg, png}', {eager:true})
 const weather = import.meta.glob('../assets/weather/*.{jpg,png}', {eager:true})
 const todo = import.meta.glob('../assets/todolist/*.{jpg,png}', {eager:true})
+const calcu = import.meta.gliob('../assets/calculator/*.{jpg,png}', {eager:true})
 
 function importAll(imgobj) {
   return Object.values(imgobj).map((mod) => mod.default || mod);
@@ -14,6 +15,7 @@ const portfolioImg = importAll(portfolio)
 const Brewpos = importAll(brewpos)
 const Weathers = importAll(weather)
 const todo_list = importAll(todo)
+const calcualtor = import(calcu)
 const projects = [
   {
     id: 1,
@@ -75,6 +77,18 @@ const projects = [
     Image: todo_list,
     github: "https://github.com/Kenezu17",
     demo: "https://github.com/Kenezu17/To-Do_List",
+  },
+   {
+    id: 6,
+    title: "Calculator web",
+    desc: "Simple calculator ",
+    tags: ["React", "Tailwind", 'Vscode' ],
+    badge: "web",
+    badgeClass: "badge-tool",
+    thumb: "teal",
+    Image: calcualtor,
+    github: "https://github.com/Kenezu17",
+    demo: "https://github.com/Kenezu17/calculator",
   }
   
 ];
