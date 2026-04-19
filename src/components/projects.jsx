@@ -4,7 +4,9 @@ const portfolio = import.meta.glob('../assets/portfolio/*.{jpg,png}', { eager: t
 const brewpos = import.meta.glob('../assets/Brewpos/*.{jpg, png}', {eager:true})
 const weather = import.meta.glob('../assets/weather/*.{jpg,png}', {eager:true})
 const todo = import.meta.glob('../assets/todolist/*.{jpg,png}', {eager:true})
-const calcu = import.meta.glob('../assets/calculator/*.{jpg,png}', {eager:true})
+const calu = import.meta.glob('../assets/calculator/*.{jpg,png}', {eager:true})
+const blog = import.meta.glob('../assets/blog/*.{jpg,png}', {eager:true})
+
 
 function importAll(imgobj) {
   return Object.values(imgobj).map((mod) => mod.default || mod);
@@ -15,7 +17,8 @@ const portfolioImg = importAll(portfolio)
 const Brewpos = importAll(brewpos)
 const Weathers = importAll(weather)
 const todo_list = importAll(todo)
-const calcualtor = import(calcu)
+const calcualtor = importAll(calu)
+const blog_img = importAll(blog)
 const projects = [
   {
     id: 1,
@@ -89,6 +92,18 @@ const projects = [
     Image: calcualtor,
     github: "https://github.com/Kenezu17",
     demo: "https://github.com/Kenezu17/calculator",
+  },
+  {
+    id: 7,
+    title: "Blog web",
+    desc: "This blog, Stories That Matter, highlights real issues affecting the Philippines today—from everyday struggles of commuters and workers to larger concerns like corruption, infrastructure problems, and social inequality. It focuses on bringing awareness to the voices often unheard in society, showing how these issues impact ordinary Filipinos in their daily lives. ",
+    tags: ["React", "Tailwind", 'Vscode', 'Css'],
+    badge: "web",
+    badgeClass: "badge-tool",
+    thumb: "teal",
+    Image: blog_img,
+    github: "https://github.com/Kenezu17",
+    demo: "https://github.com/Kenezu17/blog",
   }
   
 ];

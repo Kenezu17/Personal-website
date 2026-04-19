@@ -43,7 +43,7 @@ export default function Navbar() {
         <li>
           <Link to='/contact' className={`${isActive('/contact')}`}>Contact</Link>
         </li>
-         <span className=' text-gray-600  text-sm lg:ml-190'>{smallscreeen ? shortname: fullname}</span>
+         <span className=' text-gray-600  text-sm lg:ml-150'>{smallscreeen ? shortname: fullname}</span>
       </ul>
      
      </nav>
