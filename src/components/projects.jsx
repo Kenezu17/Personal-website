@@ -5,7 +5,7 @@ const brewpos = import.meta.glob('../assets/Brewpos/*.{jpg, png}', {eager:true})
 const weather = import.meta.glob('../assets/weather/*.{jpg,png}', {eager:true})
 const todo = import.meta.glob('../assets/todolist/*.{jpg,png}', {eager:true})
 const calu = import.meta.glob('../assets/calculator/*.{jpg,png}', {eager:true})
-const blog = import.meta.glob('../assets/blog/*.{jpg,png}', {eager:true})
+const blog = import.meta.glob('../assets/blogs/*.{jpg,png}', {eager:true})
 
 
 function importAll(imgobj) {
