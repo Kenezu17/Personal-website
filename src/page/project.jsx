@@ -32,13 +32,6 @@ export default function Project() {
           </p>
         </div>
 
-        {/* Filters */}
-        <div className="filters">
-          {["All", "Web", "App", "Game"].map((f) => (
-            <button key={f} className={`filter-btn${f === "All" ? " active" : ""}`}>{f}</button>
-          ))}
-        </div>
-
         {/* Grid */}
         <div className="projects-grid">
           {projects.map((p) => (

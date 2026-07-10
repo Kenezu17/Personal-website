@@ -8,15 +8,15 @@ export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#0b0f1a] font-mono text-[#F9FAFB] relative">
+    <div className="min-h-screen overflow-hidden bg-[#ffffff] font-mono text-[#F9FAFB] relative">
 
       {/* Background */}
       <div className="fixed inset-0 pointer-events-none z-0 opacity-60 noise" />
       <div className="fixed inset-0 pointer-events-none z-0 grid-lines" />
 
       {/* Orbs */}
-      <div className="fixed rounded-full blur-[80px] opacity-[0.18] w-[500px] h-[400px] bg-[#38bdf8] top-[100px] -left-[150px]" />
-      <div className="fixed rounded-full blur-[80px] opacity-[0.18] w-[400px] h-[400px] bg-[#818cf8] -bottom-[100px] -right-[100px]" />
+      <div className="fixed rounded-full blur-[80px] opacity-[0.18] w-[500px] h-[400px] bg-[#000000] top-[100px] -left-[150px]" />
+      <div className="fixed rounded-full blur-[80px] opacity-[0.18] w-[400px] h-[400px] bg-[#000000] -bottom-[100px] -right-[100px]" />
 
       {/* Content */}
       <div className=" relative z-10 max-w-7xl mx-auto px-6 py-10 flex flex-col lg:flex-row items-center justify-between gap-10">
@@ -38,8 +38,8 @@ export default function Home() {
             <span className='role'>{info.role}</span><span className="cursor" />
           </h1>
 
-          <p className=" text-sm sm:text-base md:text-lg text-gray-300 max-w-xl fade-up delay-300">
-            Hi, I'm <span className="text-blue-400">{info.name}</span> —
+          <p className=" text-sm sm:text-base md:text-lg text-black max-w-xl fade-up delay-300">
+            Hi, I'm <span className="text-blue-600">{info.name}</span> —
             an aspiring Software Engineer with a passion for building reliable
             systems and meaningful digital experiences.
           </p>
@@ -49,7 +49,7 @@ export default function Home() {
             <button onClick={()=>navigate('/contact')} className="px-6 py-2 bg-blue-500 rounded-lg hover:bg-blue-600 transition transform hover:scale-105">
               Hire Me
             </button>
-            <button onClick={()=> navigate('/project')} className="px-6 py-2 border border-blue-400 rounded-lg hover:bg-blue-400 hover:text-black transition transform hover:scale-105">
+            <button onClick={()=> navigate('/project')} className="px-6 py-2 border bg-blue-400 border-blue-400 rounded-lg hover:bg-blue-400 hover:text-white transition transform hover:scale-105">
               Projects
             </button>
           </div>

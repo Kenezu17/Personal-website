@@ -6,10 +6,10 @@ nav {
   align-items: center;
   width: 100%;
   padding: 16px 40px;
-  background: rgba(11, 15, 26, 0.6);
+  background: white;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.08);
+  border-bottom: 2px solid rgba(56, 189, 248, 0.08);
   z-index: 50;
   position: fixed;
   top: 0;
@@ -17,7 +17,6 @@ nav {
 }
 
 nav:hover {
-  background: rgba(11, 15, 26, 0.85);
   box-shadow: 0 4px 32px rgba(0, 0, 0, 0.3);
 }
 
@@ -35,7 +34,7 @@ nav ul li a {
   font-size: 0.85rem;
   font-weight: 600;
   text-decoration: none;
-  color: #9ca3af;
+  color: #000000;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
@@ -58,7 +57,7 @@ nav ul li a::after {
 }
 
 nav ul li a:hover {
-  color: #F9FAFB;
+  color: #a4c8eb;
 }
 
 nav ul li a:hover::after {

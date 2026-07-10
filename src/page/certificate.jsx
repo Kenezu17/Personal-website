@@ -1,9 +1,8 @@
 import React from 'react'
+import Certificates from '../components/certificates'
 
 function Certificate() {
-  return (
-    <div>certificate</div>
-  )
+  return <Certificates />
 }
 
 export default Certificate

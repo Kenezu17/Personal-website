@@ -25,11 +25,9 @@ export default function Navbar() {
   
   },[]);
 
-  const fullname =  `Portfolio/${info.name}`
-  const shortname = ''
 
   return (
-     <nav className='fade-up duration-0.1s' >
+     <nav className='flex justify-center items-center ' >
       <ul>
         <li>
           <Link to='/' className={`${isActive('/')}`}>Home</Link>
@@ -41,9 +39,12 @@ export default function Navbar() {
           <Link to='/project' className={`${isActive('/project')}`}>Project</Link>
         </li>
         <li>
+          <Link to='/certificate' className={`${isActive('/certificate')}`}>Certificate</Link>
+        </li>
+        <li>
           <Link to='/contact' className={`${isActive('/contact')}`}>Contact</Link>
         </li>
-         <span className=' text-gray-600  text-sm lg:ml-150'>{smallscreeen ? shortname: fullname}</span>
+        
       </ul>
      
      </nav>
