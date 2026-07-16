@@ -53,8 +53,8 @@ const navigate = useNavigate()
           </div>
 
           <div className="cta-row">
-            <a href="#" className="about-btn about-btn-primary">Download CV →</a>
-            <a onClick={() => navigate('/contact')} className="about-btn about-btn-ghost">Contact Me</a>
+            <a href='/jan_kenneth_fumar_resume.pdf' rel='noopener noreferrer' target='_blank' className="about-btn about-btn-ghost ">Preview</a>
+            <a href="/jan_kenneth_fumar_resume.pdf" download="Jan_Kenneth_Fumar_CV.pdf" className="about-btn about-btn-primary">Download CV →</a>
           </div>
         </div>
 

@@ -357,8 +357,8 @@
   .about-btn { display:inline-flex;align-items:center;gap:8px;padding:11px 22px;border-radius:8px;font-family:'Syne',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:0.05em;cursor:pointer;transition:all 0.22s;text-decoration:none;border:none; }
   .about-btn-primary { background:#38bdf8;color:#0b0f1a; }
   .about-btn-primary:hover { background:#7dd3fc;transform:translateY(-2px); }
-  .about-btn-ghost { background:transparent;color:#F9FAFB;border:1px solid rgba(255,255,255,0.1); }
-  .about-btn-ghost:hover { border-color:rgba(255,255,255,0.25);background:rgba(255,255,255,0.04);transform:translateY(-2px); }
+  .about-btn-ghost { background:#38bdf8;color:#ffffff;border:1px solid rgba(255,255,255,0.1); }
+  .about-btn-ghost:hover {background:#7dd3fc; transform: translateY(-2px); }
 
   .about-right { display:flex;flex-direction:column;gap:14px;animation:fadeUp 0.7s 0.4s ease both; }
   .skill-card { background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:12px;padding:18px 20px;transition:all 0.25s; }

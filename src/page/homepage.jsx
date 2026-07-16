@@ -15,8 +15,8 @@ export default function Home() {
       <div className="fixed inset-0 pointer-events-none z-0 grid-lines" />
 
       {/* Orbs */}
-      <div className="fixed rounded-full blur-[80px] opacity-[0.18] w-[500px] h-[400px] bg-[#000000] top-[100px] -left-[150px]" />
-      <div className="fixed rounded-full blur-[80px] opacity-[0.18] w-[400px] h-[400px] bg-[#000000] -bottom-[100px] -right-[100px]" />
+      <div className="fixed rounded-full blur-[80px] opacity-[0.18] w-[500px] h-[400px] bg-[#8b8cce] top-[100px] -left-[150px]" />
+      <div className="fixed rounded-full blur-[80px] opacity-[0.18] w-[400px] h-[400px] bg-[#828ad8] -bottom-[100px] -right-[100px]" />
 
       {/* Content */}
       <div className=" relative z-10 max-w-7xl mx-auto px-6 py-10 flex flex-col lg:flex-row items-center justify-between gap-10">
