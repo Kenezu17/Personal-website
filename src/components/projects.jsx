@@ -6,7 +6,7 @@ const weather = import.meta.glob('../assets/weather/*.{jpg,png}', {eager:true})
 const todo = import.meta.glob('../assets/todolist/*.{jpg,png}', {eager:true})
 const calu = import.meta.glob('../assets/calculator/*.{jpg,png}', {eager:true})
 const blog = import.meta.glob('../assets/blogs/*.{jpg,png}', {eager:true})
-
+const jvs = import.meta.glob('../assets/jvs/*.{jpg,png}', {eager:true})
 
 function importAll(imgobj) {
   return Object.values(imgobj).map((mod) => mod.default || mod);
@@ -19,6 +19,7 @@ const Weathers = importAll(weather)
 const todo_list = importAll(todo)
 const calcualtor = importAll(calu)
 const blog_img = importAll(blog)
+const jarvis = importAll(jvs)
 const projects = [
   {
     id: 1,
@@ -104,7 +105,28 @@ const projects = [
     Image: blog_img,
     github: "https://github.com/Kenezu17",
     demo: "https://github.com/Kenezu17/blog",
-  }
+  },
+  {
+  id: 8,
+  title: "Jarvis AI Assistant",
+  desc: "A desktop AI assistant built with React, Electron, and FastAPI that supports AI chat, voice commands, text-to-speech, speech recognition, and real-time system monitoring. It provides an interactive assistant experience with both online and offline AI model support, making it useful for productivity, automation, and system management.",
+  tags: [
+    "React",
+    "Electron",
+    "FastAPI",
+    "Python",
+    "JavaScript",
+    "REST API",
+    "Vite",
+    "CSS"
+  ],
+  badge: "Desktop App",
+  badgeClass: "badge-ai",
+  thumb: "purple",
+  Image: jarvis,
+  github: "https://github.com/Kenezu17",
+  demo: "#",
+}
   
 ];
 
