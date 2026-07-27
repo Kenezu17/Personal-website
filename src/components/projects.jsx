@@ -7,7 +7,7 @@ const todo = import.meta.glob('../assets/todolist/*.{jpg,png}', {eager:true})
 const calu = import.meta.glob('../assets/calculator/*.{jpg,png}', {eager:true})
 const blog = import.meta.glob('../assets/blogs/*.{jpg,png}', {eager:true})
 const jvs = import.meta.glob('../assets/jvs/*.{jpg,png}', {eager:true})
-const convertx = import.meta.glob('../assets/convertX/*.{jpg,png}', {eager:true})
+const convertx = import.meta.glob('../assets/ConvertX/*.{jpg,png}', {eager:true})
 
 function importAll(imgobj) {
   return Object.values(imgobj).map((mod) => mod.default || mod);
