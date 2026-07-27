@@ -141,6 +141,7 @@ const projects = [
     "REST API",
     "Vite",
     "CSS",
+    "Tailwind",
     "Docker"
   ],
   badge: "Web App",
