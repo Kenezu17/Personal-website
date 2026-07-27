@@ -7,6 +7,7 @@ const todo = import.meta.glob('../assets/todolist/*.{jpg,png}', {eager:true})
 const calu = import.meta.glob('../assets/calculator/*.{jpg,png}', {eager:true})
 const blog = import.meta.glob('../assets/blogs/*.{jpg,png}', {eager:true})
 const jvs = import.meta.glob('../assets/jvs/*.{jpg,png}', {eager:true})
+const convertx = import.meta.glob('../assets/convertX/*.{jpg,png}', {eager:true})
 
 function importAll(imgobj) {
   return Object.values(imgobj).map((mod) => mod.default || mod);
@@ -20,6 +21,7 @@ const todo_list = importAll(todo)
 const calcualtor = importAll(calu)
 const blog_img = importAll(blog)
 const jarvis = importAll(jvs)
+const cvtx = importAll(convertx)
 const projects = [
   {
     id: 1,
@@ -126,7 +128,29 @@ const projects = [
   Image: jarvis,
   github: "https://github.com/Kenezu17",
   demo: "#",
+},
+{ 
+  id: 9,
+  title: "ConvertX",
+  desc: "A modern web-based file conversion platform built with React and FastAPI that supports converting documents, images, audio, and videos. It features a clean drag-and-drop interface, fast server-side processing, and secure automatic file cleanup, making file conversion simple, efficient, and accessible from any device.",
+  tags: [
+    "React",
+    "FastAPI",
+    "Python",
+    "JavaScript",
+    "REST API",
+    "Vite",
+    "CSS",
+    "Docker"
+  ],
+  badge: "Web App",
+  badgeClass: "badge-web",
+  thumb: "blue",
+  Image:cvtx ,
+  github: "https://github.com/Kenezu17",
+  demo: "https://cvt-x.vercel.app/"
 }
+
   
 ];
 
