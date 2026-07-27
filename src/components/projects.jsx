@@ -132,7 +132,7 @@ const projects = [
 { 
   id: 9,
   title: "ConvertX",
-  desc: "A modern web-based file conversion platform built with React and FastAPI that supports converting documents, images, audio, and videos. It features a clean drag-and-drop interface, fast server-side processing, and secure automatic file cleanup, making file conversion simple, efficient, and accessible from any device.",
+  desc: "A modern web-based file conversion platform built with React and FastAPI that supports converting documents, and images It features a clean  interface, fast server-side processing, and secure automatic file cleanup, making file conversion simple, efficient, and accessible from any device.",
   tags: [
     "React",
     "FastAPI",
