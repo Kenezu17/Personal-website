@@ -1,18 +1,63 @@
 [personal-website-kenezu17s-projects.vercel.app](https://personal-website-kenezu17s-projects.vercel.app/)
 
-# React + Vite
+👋 Hi, I'm Jan Kenneth Fumar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I'm a BSIT student and aspiring Software Engineer from the Philippines who enjoys building practical, modern, and open-source applications. I love learning new technologies and turning ideas into software that solves real-world problems.
 
-Currently, two official plugins are available:
+🚀 About Me
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 💻 Passionate about full-stack development and software engineering.
+- 🐍 Experienced with Python, Django, FastAPI, React, Electron, JavaScript, and MySQL.
+- 🦀 Currently learning Rust, Docker, and operating system development.
+- 🌱 I enjoy building AI-powered tools, desktop applications, and web platforms.
+- 🎯 My goal is to become a Software Engineer and contribute to impactful projects.
 
-## React Compiler
+🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Languages
 
-## Expanding the ESLint configuration
+- Python
+- JavaScript
+- Rust (Learning)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Frontend
+
+- React
+- HTML
+- CSS
+- Tailwind CSS
+
+Backend
+
+- FastAPI
+- Django 
+- Node.js
+- Express
+  
+
+Database
+
+- MySQL
+  
+
+Tools
+
+- Git
+- GitHub
+- Docker
+- VS Code
+- Electron
+
+📌 Featured Projects
+
+ConvertX
+
+A free and open-source file converter built with React and FastAPI that supports multiple document and image conversions.
+
+Jarvis AI Assistant
+
+A desktop AI assistant built with React, Electron, and FastAPI featuring AI chat, voice commands, speech recognition, text-to-speech, and system monitoring.
+
+📫 Connect With Me
+
+I'm always interested in learning, collaborating, and building useful software. Feel free to explore my repositories or reach out if you'd like to work together.
