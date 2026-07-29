@@ -48,15 +48,6 @@ Tools
 - VS Code
 - Electron
 
-📌 Featured Projects
-
-ConvertX
-
-A free and open-source file converter built with React and FastAPI that supports multiple document and image conversions.
-
-Jarvis AI Assistant
-
-A desktop AI assistant built with React, Electron, and FastAPI featuring AI chat, voice commands, speech recognition, text-to-speech, and system monitoring.
 
 📫 Connect With Me
 
